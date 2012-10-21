@@ -1,0 +1,6 @@
+*~
+**/*~
+*.beam
+**/*.beam
+erl_crash.dump
+doc/*
