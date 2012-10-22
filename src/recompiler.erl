@@ -1,5 +1,4 @@
-%% @copyright 2011 Johan Persson
-%% @copytight 2012 Johan Persson, Programlabbet AB
+%% @copyright 2011-2012 Johan Persson
 %% @author Johan Persson <johan@programlabbet.se>
 %%
 %% @doc Erlang module for automatically recompiling modified modules
