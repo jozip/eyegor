@@ -1,10 +1,12 @@
-%% @author Mochi Media <dev@mochimedia.com>
-%% @copyright 2010 Mochi Media <dev@mochimedia.com>
-
-%% @doc eyegor.
+%% @copyright 2011 Johan Persson
+%% @copytight 2012 Johan Persson, Programlabbet AB
+%% @author Johan Persson <johan@programlabbet.se>
+%%
+%% @doc Application starter helper
 
 -module(eyegor).
--author("Mochi Media <dev@mochimedia.com>").
+-author("Johan Persson <johan@programlabbet.se>").
+
 -export([start/0, stop/0]).
 
 %% @spec start() -> ok

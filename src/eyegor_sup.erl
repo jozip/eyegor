@@ -2,8 +2,7 @@
 %% @copytight 2012 Johan Persson, Programlabbet AB
 %% @author Johan Persson <johan@programlabbet.se>
 %%
-%% @doc Development helper.
-%%
+%% @doc Supervisor
 
 -module(eyegor_sup).
 -author("Johan Persson <johan@programlabbet.se>").
