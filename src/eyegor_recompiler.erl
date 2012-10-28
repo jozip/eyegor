@@ -6,7 +6,7 @@
 %%
 %% Based heavily on reloader.erl by Matthew Dempsky.
 
--module(recompiler).
+-module(eyegor_recompiler).
 -author("Johan Persson <johan@programlabbet.se>").
 
 -behaviour(gen_server).
