@@ -30,7 +30,7 @@ start_link() ->
 
 init([]) ->
     {ok, { {one_for_one, 5, 10}, [
-                                  ?CHILD(reloader, worker),
-                                  ?CHILD(recompiler, worker)
+                                  ?CHILD(eyegor_reloader, worker),
+                                  ?CHILD(eyegor_recompiler, worker)
                                  ]} }.
 
