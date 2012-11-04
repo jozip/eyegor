@@ -102,9 +102,12 @@ doit(From, To) ->
          {Filename, Options} -> 
              case file:read_file_info(Filename ++ ".erl") of
                  {ok, #file_info{mtime = Mtime}} when Mtime >= From, Mtime < To ->
-                     recompile(Module, Filename,
-                               lists:keyreplace(outdir, 1, Options,
-                                                {outdir, filename:dirname(code:which(Module))}));
+                     %% Yech.
+                     Base = filename:rootname(Filename,
+                                              filename:join("src", atom_to_list(Module))),
+                     Options2 = lists:keyreplace(i, 1, Options, {i, filename:join(Base, "include")}),
+                     Options3 = lists:keyreplace(outdir, 1, Options2, {outdir, filename:join(Base, "ebin")}),
+                     recompile(Module, Filename, Options3);
                  {ok, _} ->
                      unmodified;
                  {error, enoent} ->
